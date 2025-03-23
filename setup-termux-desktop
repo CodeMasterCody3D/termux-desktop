@@ -2250,7 +2250,7 @@ function hw_config() {
 
             if [[ "$change_old_hw_installer" == "y" ]]; then
                 check_and_backup "${current_path}/enable-hw-acceleration"
-                download_file "${current_path}/enable-hw-acceleration" https://raw.githubusercontent.com/sabamdarif/termux-desktop/refs/heads/main/enable-hw-acceleration
+                download_file "${current_path}/enable-hw-acceleration" https://raw.githubusercontent.com/CodeMasterCody3D/termux-desktop/refs/heads/main/enable-hw-acceleration
 				chmod +x "${current_path}/enable-hw-acceleration"
                 . "${current_path}"/enable-hw-acceleration
             else
@@ -2266,7 +2266,7 @@ function hw_config() {
             . "${current_path}"/enable-hw-acceleration
         fi
     else
-        download_file "${current_path}/enable-hw-acceleration" https://raw.githubusercontent.com/sabamdarif/termux-desktop/refs/heads/main/enable-hw-acceleration
+        download_file "${current_path}/enable-hw-acceleration" https://raw.githubusercontent.com/CodeMasterCody3D/termux-desktop/refs/heads/main/enable-hw-acceleration
 		chmod +x "${current_path}/enable-hw-acceleration"
         . "${current_path}"/enable-hw-acceleration
     fi
