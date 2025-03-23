@@ -2238,7 +2238,7 @@ function hw_config() {
 	print_to_config "enable_hw_acc"
     if [[ -f ${current_path}/enable-hw-acceleration ]]; then
         local current_script_hash
-        current_script_hash=$(curl -sL https://raw.githubusercontent.com/sabamdarif/termux-desktop/refs/heads/main/enable-hw-acceleration | sha256sum | cut -d ' ' -f 1)
+        current_script_hash=$(curl -sL https://raw.githubusercontent.com/CodeMasterCody3D/termux-desktop/refs/heads/main/enable-hw-acceleration | sha256sum | cut -d ' ' -f 1)
         local local_script_hash
         local_script_hash=$(sha256sum "${current_path}/enable-hw-acceleration" | cut -d ' ' -f 1)
 
