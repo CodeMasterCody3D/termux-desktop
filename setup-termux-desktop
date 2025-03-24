@@ -3842,12 +3842,14 @@ function change_hw() {
 				read -r -p "${R}[${C}-${R}]${Y}${BOLD} Do you want to continue ${Y}(y/n/a) ${W}" confirmation_break_de
 				case $confirmation_break_de in
 					[yY]* )
+                                                proot-distro login $selected_distro --shared-tmp -- env DISPLAY=:1.0 apt-mark unhold mesa-vulkan-drivers libgl1-mesa-dri mesa-libgallium
 						echo
 						print_success "Continuing with answer: $confirmation_break_de"
 						echo
 						sleep 0.2
 						break;;
 					[aA]* )
+                                                proot-distro login $selected_distro --shared-tmp -- env DISPLAY=:1.0 apt-mark unhold mesa-vulkan-drivers libgl1-mesa-dri mesa-libgallium
 						echo
 						print_success "Continuing with answer: $confirmation_break_de"
 						echo
