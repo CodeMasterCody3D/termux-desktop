@@ -3873,7 +3873,10 @@ function change_hw() {
 				echo "${R}[${C}-${R}]${R}${BOLD} This process might break your desktop environment${W}"
 		        package_check_and_remove "mesa-zink vulkan-loader-android virglrenderer-android angle-android mesa-vulkan-icd-freedreno-dri3"
 			fi
-
+             
+		    setup_device_gpu_model
+		    distro_hw_questions
+		    exp_termux_gl_hw_support
 		    hw_questions
 		    hw_config
 		    if [[ "$gui_mode" == "termux_x11" ]]; then
